@@ -6,7 +6,7 @@
 [4]: https://github.com/jerrykuku/luci-theme-argon/pulls
 [5]: https://img.shields.io/badge/Issues-welcome-brightgreen.svg
 [6]: https://github.com/jerrykuku/luci-theme-argon/issues/new
-[7]: https://img.shields.io/badge/release-v2.1-blue.svg?
+[7]: https://img.shields.io/badge/release-v2.2.4-blue.svg?
 [8]: https://github.com/jerrykuku/luci-theme-argon/releases
 [9]: https://img.shields.io/github/downloads/jerrykuku/luci-theme-argon/total
 [10]: https://img.shields.io/badge/Contact-telegram-blue
@@ -18,24 +18,44 @@
 [![Release Count][9]][8]
 [![Contact Me][10]][11]
 
-![](/Screenshots/pc1.jpg)
-![](/Screenshots/phone.jpg)
+![](/Screenshots/screenshot_pc.jpg)
+![](/Screenshots/screenshot_phone.jpg)
 
 A new Luci theme for LEDE/OpenWRT  
 Argon is a clean HTML5 theme for LuCI. It is based on luci-theme-material and Argon Template  
 
+## Notice 
 
-The old version is still in another branch call old. If you need that you can checkout that branch.
+v2.x.x Adapt to official mainline snapshot.  
+You can checkout branch 18.06 for OpenWRT 18.06 or lean 19.07.
 
-## Notice
-v2.01 Adapt to official 19.07 stable version (not snapshot) LuCI openwrt-19.07 branch (git-20.006.26738-35aa527).  
-v2.1 Adapt to official mainline snapshot.  
-You can checkout branch 18.06 for  OpenWRT 18.06 or lean 19.07.
+## Update log 2020.08.21 v2.2.4
+
+- 【v2.2.4】Fix the problem that the login background cannot be displayed on some phones.
+- 【v2.2.4】Remove the dependency of luasocket.
+- 【v2.2.3】Fix Firmware flash page display error in dark mode.
+- 【v2.2.3】Update font icon, add a default icon of undefined menu.
+- 【v2.2.2】Add custom login background,put your image (allow png jpg gif) or MP4 video into /www/luci-static/argon/background, random change.
+- 【v2.2.2】Add force dark mode, login ssh and type "touch /etc/dark" to open dark mode.
+- 【v2.2.2】Add a volume mute button for video background, default is muted.
+- 【v2.2.2】fix login page when keyboard show the bottom text overlay the button on mobile.
+- 【v2.2.2】fix select color in dark mode,and add a style for scrollbar.
+- 【v2.2.2】jquery update to v3.5.1.
+- 【v2.2.2】change request bing api method form wget to luasocket (DEPENDS).
+- 【v2.2.1】Add blur effect for login form.
+- 【v2.2.1】New login theme, Request background imge from bing.com, Auto change everyday.
+- 【v2.2.1】New theme icon.
+- 【v2.2.1】Add more menu category  icon.
+- 【v2.2.1】Fix font-size and padding margin.
+- 【v2.2.1】Restructure css file.
+- 【v2.2.1】Auto adapt to dark mode.
 
 ## How to build
 
-Enter in your openwrt/package/lean  or  other
-####Lean lede
+Enter in your openwrt/package/lean or other
+
+### Lean lede
+
 ```
 cd lede/package/lean  
 rm -rf luci-theme-argon  
@@ -44,7 +64,8 @@ make menuconfig #choose LUCI->Theme->Luci-theme-argon
 make -j1 V=s  
 ```
 
-####Openwrt SnapShots
+### Openwrt official SnapShots
+
 ```
 cd openwrt/package
 git clone https://github.com/jerrykuku/luci-theme-argon.git  
@@ -52,33 +73,22 @@ make menuconfig #choose LUCI->Theme->Luci-theme-argon
 make -j1 V=s  
 ```
 
-## Install 
-### For Lean openwrt
-```
-wget --no-check-certificate https://github.com/jerrykuku/luci-theme-argon/releases/download/1.5.1/luci-theme-argon_1.5.1-01-20200331_all.ipk
-opkg install luci-theme-argon_1.5.1-01-20200331_all.ipk
-```
+## How to Install 
 
-### For openwrt 19.07 stable LuCI branch (git-20.006.26738-35aa527)
+### For Lean openwrt 18.06 LuCI
+
 ```
-wget --no-check-certificate https://github.com/jerrykuku/luci-theme-argon/releases/download/v2.01/luci-theme-argon_2.01-20200203_all.ipk
-opkg install luci-theme-argon_2.01-20200203_all.ipk
+wget --no-check-certificate https://github.com/jerrykuku/luci-theme-argon/releases/download/v1.6.9/luci-theme-argon_1.6.9-20200821_all.ipk
+opkg install luci-theme-argon*.ipk
 ```
 
-### For openwrt 19.07 Snapshots LuCI master (git-20.033.77428-3d63732)
+### For openwrt official 19.07 Snapshots LuCI master
+
 ```
-wget --no-check-certificate https://github.com/jerrykuku/luci-theme-argon/releases/download/v2.1/luci-theme-argon_2.1-20200206_all.ipk
-opkg install luci-theme-argon_2.1-20200206_all.ipk
+wget --no-check-certificate https://github.com/jerrykuku/luci-theme-argon/releases/download/v2.2.4/luci-theme-argon_2.2.4-20200821_all.ipk
+opkg install luci-theme-argon*.ipk
 ```
 
-## Update log 2020.02.06
-1. v2.01  Fix display error, when not set password.
-2. v2.1 Adapt to official mainline snapshot.
+## Thanks to
 
-## More Screenshots
-
-![](/Screenshots/pc2.jpg)
-![](/Screenshots/pc3.jpg)
-
-## Thanks to 
 luci-theme-material: https://github.com/LuttyYang/luci-theme-material/
